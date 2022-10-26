@@ -26,6 +26,7 @@ if count == 21 then
     break;
 end
 end
+end
 wait(15)
 local script = [[
 loadstring(game:HttpGet('https://raw.githubusercontent.com/yeyecowboy/balls/main/script'))()
