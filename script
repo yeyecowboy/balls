@@ -21,6 +21,7 @@ local args = {[1] = "7_"..count} game:GetService("ReplicatedStorage").CommonEven
 local args = {[1] = "8_"..count} game:GetService("ReplicatedStorage").CommonEvents.Hit:FireServer(unpack(args))
 local args = {[1] = "9_"..count} game:GetService("ReplicatedStorage").CommonEvents.Hit:FireServer(unpack(args))
 local args = {[1] = "10_"..count} game:GetService("ReplicatedStorage").CommonEvents.Hit:FireServer(unpack(args))
+task.wait()
 count = count + 1
 if count == 21 then
     break;
