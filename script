@@ -4,6 +4,9 @@ print("autofarming")
 local TeleportService = game:GetService("TeleportService")
 if game:GetService("ReplicatedStorage").ClickSession == true then
     task.wait(30)
+    for i = 1,100 do
+        game:GetService("ReplicatedStorage").CommonEvents.Clicking:FireServer()
+    end
 end    
 local count = 1
 while 1 do
@@ -18,7 +21,6 @@ local args = {[1] = "7_"..count} game:GetService("ReplicatedStorage").CommonEven
 local args = {[1] = "8_"..count} game:GetService("ReplicatedStorage").CommonEvents.Hit:FireServer(unpack(args))
 local args = {[1] = "9_"..count} game:GetService("ReplicatedStorage").CommonEvents.Hit:FireServer(unpack(args))
 local args = {[1] = "10_"..count} game:GetService("ReplicatedStorage").CommonEvents.Hit:FireServer(unpack(args))
-end
 count = count + 1
 if count == 21 then
     break;
