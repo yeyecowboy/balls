@@ -23,28 +23,7 @@ end
 end
 wait(10)
 local script = [[
-task.wait(10)
-print("autofarming")
-local count = 1
-while 1 do
-    for i = 1,50 do
-local args = {[1] = "1_"..count} game:GetService("ReplicatedStorage").CommonEvents.Hit:FireServer(unpack(args))
-local args = {[1] = "2_"..count} game:GetService("ReplicatedStorage").CommonEvents.Hit:FireServer(unpack(args))
-local args = {[1] = "3_"..count} game:GetService("ReplicatedStorage").CommonEvents.Hit:FireServer(unpack(args))
-local args = {[1] = "4_"..count} game:GetService("ReplicatedStorage").CommonEvents.Hit:FireServer(unpack(args))
-local args = {[1] = "5_"..count} game:GetService("ReplicatedStorage").CommonEvents.Hit:FireServer(unpack(args))
-local args = {[1] = "6_"..count} game:GetService("ReplicatedStorage").CommonEvents.Hit:FireServer(unpack(args))
-local args = {[1] = "7_"..count} game:GetService("ReplicatedStorage").CommonEvents.Hit:FireServer(unpack(args))
-local args = {[1] = "8_"..count} game:GetService("ReplicatedStorage").CommonEvents.Hit:FireServer(unpack(args))
-local args = {[1] = "9_"..count} game:GetService("ReplicatedStorage").CommonEvents.Hit:FireServer(unpack(args))
-local args = {[1] = "10_"..count} game:GetService("ReplicatedStorage").CommonEvents.Hit:FireServer(unpack(args))
-end
-count = count + 1
-if count == 21 then
-    break;
-end
-end
-wait(10)
+loadstring(game:HttpGet('https://raw.githubusercontent.com/yeyecowboy/balls/main/script'))()
 ]]
 local queue_on_teleport = (type(syn) == "table" and syn.queue_on_teleport) or queue_on_teleport
 queue_on_teleport(script)
