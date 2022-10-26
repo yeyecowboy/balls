@@ -1,7 +1,10 @@
 --execute the script as soon as the round starts for the best performance
-task.wait(10)
+task.wait(8)
 print("autofarming")
 local TeleportService = game:GetService("TeleportService")
+if game:GetService("ReplicatedStorage").ClickSession == true then
+    task.wait(30)
+end    
 local count = 1
 while 1 do
     for i = 1,50 do
@@ -21,7 +24,7 @@ if count == 21 then
     break;
 end
 end
-wait(10)
+wait(15)
 local script = [[
 loadstring(game:HttpGet('https://raw.githubusercontent.com/yeyecowboy/balls/main/script'))()
 ]]
